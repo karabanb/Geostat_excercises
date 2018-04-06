@@ -1,8 +1,10 @@
 
-library("sp")
-library("ggplot2")
-library("corrplot")
-library("geostatbook")
+library(sp)
+library(ggplot2)
+library(corrplot)
+library(geostatbook)
+library(rgdal)
+
 data(punkty)
 data(granica)
 
@@ -39,5 +41,13 @@ plot(siatka2)
 points(punkty, pch = 2)
 
 ### siatki nieregularne rastrowe
+
+
+granica <- readOGR(".", layer = "granica") # przyklad zaczytania pliku shp, prj, bdf, czy shx
+
+plot(granica)
+
+siatka_n <- 
+
 
 
